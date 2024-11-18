@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="app.js" async></script>
+    <title>Panaderia El Causal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        /* Estilo para el menú de navegación */
+        nav {
+            background-color: #b16464;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff5722;
+        }
+
+        body {
+            margin: 0;
+            padding-top: 60px; /* Espacio para el menú fijo */
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#carrito">Carrito</a>
+    </nav>
+    <header id="inicio">
+        <h1>Panaderia El Causal</h1>
+    </header>
+    <section class="contenedor">
+        <!--contenedor de elementos-->
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Pan Frances</span>
+                <img src="IMG/panfranses.jpeg" alt="" class="img-item">
+                <span class="precio-item">$5000</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>   
+            <div class="item">
+                <span class="titulo-item">Pan De Queso</span>
+                <img src="IMG/pansitodequeso.jpeg" alt="" class="img-item">
+                <span class="precio-item">$4000</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Pan De Jamon</span>
+                <img src="IMG/pandejamon.jpeg" alt="" class="img-item">
+                <span class="precio-item">$8000</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div> 
+            <div class="item">
+                <span class="titulo-item">Pan Dulce</span>
+                <img src="IMG/pandulce.jpg" alt="" class="img-item">
+                <span class="precio-item">$5000</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div> 
+            <div class="item">
+                <span class="titulo-item">Pan crema</span>
+                <img src="IMG/pancrema.jpeg" alt="" class="img-item">
+                <span class="precio-item">$5000</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>  
+            <div class="item">
+                <span class="titulo-item">Pan de azucar</span>
+                <img src="IMG/panazucar.jpg" alt="" class="img-item">
+                <span class="precio-item">$5000</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div> 
+            <div class="item">
+                <span class="titulo-item">Croissant</span>
+                <img src="IMG/Croissant.jpg" alt="" class="img-item">
+                <span class="precio-item">$5000</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>     
+            <div class="item">
+                <span class="titulo-item">Pan Pizza</span>
+                <img src="IMG/panpizza.jpg" alt="" class="img-item">
+                <span class="precio-item">$5000</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+        </div>            
+    
+    
+         <!--carrito de compras-->
+         <div id="carrito" class="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div> 
+
+            <div class="carrito-items">
+                <div class="carrito-item">
+                    <img src="IMG/panfranses.jpeg" alt=""  width="80px">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Pan Frances</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>   
+                        <span class="carrito-item-precio">$5.000</span>
+                    </div>  
+                    <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                    </span> 
+                </div>      
+
+                <div class="carrito-item">
+                    <img src="IMG/pansitodequeso.jpeg" alt=""  width="80px">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Pan de Queso</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>   
+                        <span class="carrito-item-precio">$4.000</span>
+                    </div>  
+                    <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                    </span> 
+                </div>
+            </div>
+
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+            </div>
+                
+     </section>
+
+   
+
+</body>
+</html>
